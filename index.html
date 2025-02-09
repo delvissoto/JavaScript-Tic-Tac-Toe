@@ -5,24 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
   <title>Document</title>
 </head>
 <body>
-  <div class="board" id="board">
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
+  <div class="setup">
+    <input type="text" id="playerXName" placeholder="Enter Player X Name">
+    <input type="text" id="playerOName" placeholder="Enter Player O Name">
+    <button id="startGameButton">Start Game</button>
   </div>
+  
+  <div class="game hidden" id="game">
+    <h2 id="turnIndicator"></h2>
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <div class="scoreboard">
+      <h3>Scoreboard</h3>
+      <p><span id="playerXDisplay">Player X</span>: <span id="scoreX">0</span></p>
+      <p><span id="playerODisplay">Player O</span>: <span id="scoreO">0</span></p>
+      <button id="restartButton">Restart</button>
+      <button id="resetScoreButton">Reset Scores</button>
+    </div>
+  </div>
+  
   <div class="winning-message" id="winningMessage">
     <div data-winning-message-text></div>
-    <button id="restartButton">Restart</button>
   </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
